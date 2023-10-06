@@ -13,6 +13,6 @@ public class Main {
 
         System.out.println("(Bike)context.getBean(\"bike\") = " + (Bike)context.getBean("bike"));
 
-        context.registerShutdownHook();
+        System.out.println("(example)context.getBean(\"example\") = " + (Example)context.getBean("example"));
     }
 }

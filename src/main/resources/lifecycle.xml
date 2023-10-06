@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
 
     <bean class="com.spring.lifecycle.Car" name="car" init-method="init" destroy-method="destroy">
         <property name="price" value="1232423.34" />
@@ -9,4 +13,6 @@
     <bean class="com.spring.lifecycle.Bike" name="bike" >
         <property name="price" value="323223.34" />
     </bean>
+
+    <bean class="com.spring.lifecycle.Example" name="example" p:subject="math" />
 </beans>
