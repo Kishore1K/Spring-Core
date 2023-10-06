@@ -10,5 +10,9 @@ public class Main {
         System.out.println("(Car)context.getBean(\"car\") = " + (Car)context.getBean("car"));
 
         context.registerShutdownHook();
+
+        System.out.println("(Bike)context.getBean(\"bike\") = " + (Bike)context.getBean("bike"));
+
+        context.registerShutdownHook();
     }
 }

@@ -6,4 +6,7 @@
     <bean class="com.spring.lifecycle.Car" name="car" init-method="init" destroy-method="destroy">
         <property name="price" value="1232423.34" />
     </bean>
+    <bean class="com.spring.lifecycle.Bike" name="bike" >
+        <property name="price" value="323223.34" />
+    </bean>
 </beans>
