@@ -9,6 +9,12 @@
         <constructor-arg name="name" value="Kishore" />
         <constructor-arg name="personId" value="23432"/>
         <constructor-arg name="cert" ref="cert" />
+        <constructor-arg name="list">
+            <list>
+                <value>Kishore</value>
+                <value>Karthick</value>
+            </list>
+        </constructor-arg>
     </bean>
 
     <bean class="com.spring.const_injection.Certif" name="cert" c:name="Java" />
