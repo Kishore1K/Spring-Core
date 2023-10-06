@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean class="com.spring.refer.B" name="b1">
+            <property name="address" value="KGF"/>
+            <property name="phone" value="832765872" />
+        </bean>
+
+    <bean name="aref" class="com.spring.refer.A">
+        <property name="name" value="Kishore" />
+        <property name="obj" ref="b1"/>
+
+    </bean>
+</beans>
