@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="add" class="com.spring.Addition" c:a="123" c:b="345" />
+    <bean name="add1" class="com.spring.Addition">
+        <constructor-arg value="123" type="java.lang.String" />
+        <constructor-arg value="234" type="java.lang.String" />
+    </bean>
+    <bean name="add2" class="com.spring.Addition">
+        <constructor-arg value="123" type="int" />
+        <constructor-arg value="234" type="int" />
+    </bean>
+    <bean name="add3" class="com.spring.Addition">
+        <constructor-arg value="123.33" type="double"/>
+        <constructor-arg value="234.34" type="double"/>
+    </bean>
+
+
+
+
+</beans>
