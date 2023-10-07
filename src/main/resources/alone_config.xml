@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                               http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--    stand alone list-->
+    <util:list list-class="java.util.LinkedList" id="friends">
+        <value>Ankush</value>
+        <value>Anirudh</value>
+        <value>Manju</value>
+        <value>Akshay</value>
+
+    </util:list>
+
+    <util:map map-class="java.util.HashMap" id="fees" >
+        <entry key="Java" value="872" value-type="java.lang.Integer"/>
+        <entry key="C/C++" value="873" value-type="java.lang.Integer"/>
+        <entry key="AI/ML" value="932" value-type="java.lang.Integer" />
+    </util:map>
+    <bean class="com.spring.standalone.collections.Person" name="person">
+        <property name="friends" ref="friends" />
+    </bean>
+    <bean class="com.spring.standalone.collections.Person" name="person2">
+        <property name="friends" ref="friends"/>
+        <property name="fees" ref="fees" />
+    </bean>
+
+
+
+</beans>
