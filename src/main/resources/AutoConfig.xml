@@ -11,7 +11,9 @@
 <!--    <bean class="com.spring.auto.wire.Emp" name="emp1" p:name="K" autowire="byType" />-->
 <!--    <bean class="com.spring.auto.wire.Emp" name="emp2" p:name="Kishore" autowire="constructor" />-->
     <bean class="com.spring.auto.annotation.Address" name="address" p:city="KGF" p:state="KA" />
-        <bean class="com.spring.auto.annotation.Emp" name="emp" p:name="KISHORE"  />
+    <bean class="com.spring.auto.annotation.Address" name="address1" p:city="mysore" p:state="KA" />
+
+    <bean class="com.spring.auto.annotation.Emp" name="emp" p:name="KISHORE"  />
 
 
 
