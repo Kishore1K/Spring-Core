@@ -4,6 +4,15 @@ public class Emp {
     private String name;
     private Address address;
 
+    public Emp() {
+        super();
+    }
+
+    public Emp(String name, Address address) {
+        this.name = name;
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "Emp{" +

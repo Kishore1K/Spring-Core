@@ -6,5 +6,9 @@
 
     <bean class="com.spring.auto.wire.Address" name="address" p:city="KGF" p:state="KA" />
     <bean class="com.spring.auto.wire.Emp" name="emp" p:name="KISHORE" autowire="byName" />
+    <bean class="com.spring.auto.wire.Emp" name="emp1" p:name="K" autowire="byType" />
+    <bean class="com.spring.auto.wire.Emp" name="emp2" p:name="Kishore" autowire="constructor" />
+
+
 
 </beans>
