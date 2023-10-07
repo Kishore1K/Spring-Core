@@ -11,6 +11,6 @@
         <property name="studentAddress" value="KGF"/>
     </bean>
 <!--    2 Bean using p:schema-->
-    <bean class="com.jsp.Student" name="student2" p:studentId="124343" p:name="Karthick" p:studentAddress="Bengaluru" />
+    <bean class="com.jsp.Student" name="student2" p:studentId="124343" p:name="Karthick" p:studentAddress="Bengaluru"  scope="prototype"/>
 
 </beans>
