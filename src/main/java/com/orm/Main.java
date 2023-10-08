@@ -47,8 +47,8 @@ public class Main {
         System.out.println(studentDAO.getAllStudents());*/
         System.out.println("----------------------------------------------------------------");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        int input = 0;
-        do {
+
+        while (true){
             System.out.println("PRESS 1: To add Student");
             System.out.println("Press 2: Display All students");
             System.out.println("Press 3: Update Student details");
@@ -56,7 +56,7 @@ public class Main {
             System.out.println("Press 5: View  Single Students");
             System.out.println("Press 6: Exit");
             try {
-                input = Integer.parseInt(bufferedReader.readLine());
+                int input = Integer.parseInt(bufferedReader.readLine());
                 switch (input) {
                     case 1:
                         System.out.println("Enter Student id");
@@ -123,7 +123,7 @@ public class Main {
                 System.out.println(e.getMessage());
             }
 
-        } while (input != 6);
+        }
 
 
     }
