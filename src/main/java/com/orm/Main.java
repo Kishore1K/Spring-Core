@@ -97,7 +97,6 @@ public class Main {
                         System.out.println("Updated Details of student");
                         Student student1 = studentDAO.getStudent(id);
                         System.out.println("--------------------------------------------------------------");
-                        System.out.println();
                         System.out.println("| Name : " + student1.getName()+ "| Email Id : "+ student1.getEmail()+ "| Address : "+ student1.getAddress()+" |");
                         System.out.println("-----------------------------------------------------------------");
                         break;
