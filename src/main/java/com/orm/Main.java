@@ -110,7 +110,6 @@ public class Main {
                         Student student= studentDAO.getStudent(Integer.parseInt(bufferedReader.readLine()));
                         System.out.println();
                         System.out.println("--------------------------------------------------------------");
-                        System.out.println();
                         System.out.println("| Name : " + student.getName()+ "| Email Id : "+ student.getEmail()+ "| Address : "+ student.getAddress()+" |");
                         System.out.println("-----------------------------------------------------------------");
                         break;
