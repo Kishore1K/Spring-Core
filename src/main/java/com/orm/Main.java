@@ -72,13 +72,12 @@ public class Main {
                         System.out.println(studentDAO.insert(new Student(id, name, email, addr)));
                         break;
                     case 2:
-                        System.out.println("List of Students are : ");
+                        System.out.println("List of Students : ");
                         List<Student> studentList = studentDAO.getAllStudents();
                         System.out.println("-------------------------------------------------");
-                        System.out.println();
+
                         for ( Student s : studentList){
                             System.out.println("| Name : " + s.getName()+ "| Email Id : "+ s.getEmail()+ "| Address : "+ s.getAddress()+" |");
-                            System.out.println();
                         }
                         System.out.println();
                         System.out.println("--------------------------------------------------");
