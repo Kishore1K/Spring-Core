@@ -45,20 +45,19 @@ public class Main {
         System.out.println("Fetching all Students");
 
         System.out.println(studentDAO.getAllStudents());*/
-        System.out.println("-------------------------------------");
-        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(System.in));
-        while (true){
+        System.out.println("----------------------------------------------------------------");
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int input = 0;
+        do {
             System.out.println("PRESS 1: To add Student");
             System.out.println("Press 2: Display All students");
             System.out.println("Press 3: Update Student details");
             System.out.println("Press 4: Delete Student");
             System.out.println("Press 5: View  Single Students");
             System.out.println("Press 6: Exit");
-
-
-            try{
-                int input = Integer.parseInt(bufferedReader.readLine());
-                switch (input){
+            try {
+                input = Integer.parseInt(bufferedReader.readLine());
+                switch (input) {
                     case 1:
                         System.out.println("Enter Student id");
                         int id = Integer.parseInt(bufferedReader.readLine());
@@ -67,17 +66,15 @@ public class Main {
                         System.out.println("Enter email");
                         String email = bufferedReader.readLine();
                         System.out.println("Enter Address");
-                        String addr =bufferedReader.readLine();
-
+                        String addr = bufferedReader.readLine();
                         System.out.println(studentDAO.insert(new Student(id, name, email, addr)));
                         break;
                     case 2:
                         System.out.println("List of Students : ");
                         List<Student> studentList = studentDAO.getAllStudents();
                         System.out.println("-------------------------------------------------");
-
-                        for ( Student s : studentList){
-                            System.out.println("| Name : " + s.getName()+ "| Email Id : "+ s.getEmail()+ "| Address : "+ s.getAddress()+" |");
+                        for (Student s : studentList) {
+                            System.out.println("| Name : " + s.getName() + "| Email Id : " + s.getEmail() + "| Address : " + s.getAddress() + " |");
                         }
                         System.out.println();
                         System.out.println("--------------------------------------------------");
@@ -86,18 +83,18 @@ public class Main {
                     case 3:
 
                         System.out.println("Enter Student id");
-                         id = Integer.parseInt(bufferedReader.readLine());
+                        id = Integer.parseInt(bufferedReader.readLine());
                         System.out.println("Enter name");
-                         name = bufferedReader.readLine();
+                        name = bufferedReader.readLine();
                         System.out.println("Enter email");
-                         email = bufferedReader.readLine();
+                        email = bufferedReader.readLine();
                         System.out.println("Enter Address");
-                         addr =bufferedReader.readLine();
+                        addr = bufferedReader.readLine();
                         studentDAO.updateStudent(new Student(id, name, email, addr));
                         System.out.println("Updated Details of student");
                         Student student1 = studentDAO.getStudent(id);
                         System.out.println("--------------------------------------------------------------");
-                        System.out.println("| Name : " + student1.getName()+ "| Email Id : "+ student1.getEmail()+ "| Address : "+ student1.getAddress()+" |");
+                        System.out.println("| Name : " + student1.getName() + "| Email Id : " + student1.getEmail() + "| Address : " + student1.getAddress() + " |");
                         System.out.println("-----------------------------------------------------------------");
                         break;
                     case 4:
@@ -107,29 +104,26 @@ public class Main {
                         break;
                     case 5:
                         System.out.println("Enter the student id");
-                        Student student= studentDAO.getStudent(Integer.parseInt(bufferedReader.readLine()));
+                        Student student = studentDAO.getStudent(Integer.parseInt(bufferedReader.readLine()));
                         System.out.println();
                         System.out.println("--------------------------------------------------------------");
-                        System.out.println("| Name : " + student.getName()+ "| Email Id : "+ student.getEmail()+ "| Address : "+ student.getAddress()+" |");
+                        System.out.println("| Name : " + student.getName() + "| Email Id : " + student.getEmail() + "| Address : " + student.getAddress() + " |");
                         System.out.println("-----------------------------------------------------------------");
                         break;
                     case 6:
                         System.out.println("Thank You For using Application");
                         System.exit(0);
-
                         break;
                     default:
                         System.out.println("Pls. Enter the Correct Option");
                         break;
                 }
 
-            }catch (Exception e){
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
 
-        }
-
-
+        } while (input != 6);
 
 
     }
