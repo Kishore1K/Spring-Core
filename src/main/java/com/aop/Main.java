@@ -1,7 +1,6 @@
 package com.aop;
 
 import com.aop.service.paymentService;
-import com.aop.service.paymentServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -12,6 +11,6 @@ public class Main {
 
         paymentService paymentService = context.getBean("paymentService", paymentService.class);
 
-        paymentService.makePayment();
+        paymentService.makePayment(100);
     }
 }
